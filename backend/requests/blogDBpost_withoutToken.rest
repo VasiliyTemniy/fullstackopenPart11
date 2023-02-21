@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+
+{
+  "title": "Something very useful",
+  "author": "Somebody very Smart",
+  "url": "http://somecoolsite.com/vasiliynucbkun/2016/05/01/uwontbelieve.html",
+  "likes": 2,
+  "user": "632e05b622967305927f7e8d",
+  "__v": 0
+}

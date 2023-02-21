@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlZhc2lzdWFsaXkiLCJpZCI6IjYzMmUwNWI2MjI5NjczMDU5MjdmN2U4YyIsImlhdCI6MTY2NDEyODU3MSwiZXhwIjoxNjY0MzAxMzcxfQ.MsC_KZ5InseBybD8zgWGfAtl2E84p-Y0vIi69D5brOw
+
+{
+  "title": "Something very useful",
+  "author": "Somebody very Smart",
+  "url": "http://somecoolsite.com/vasiliynucbkun/2016/05/01/uwontbelieve.html",
+  "likes": 2,
+  "user": "632e05b622967305927f7e8d",
+  "__v": 0
+}
