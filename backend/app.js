@@ -17,9 +17,11 @@ app.use(express.static('../dist'))
 // eslint-disable-next-line no-undef
 const isProduction = process.env.NODE_ENV === 'production'
 // eslint-disable-next-line no-undef
-const isTest = process.env.NODE_ENV === 'test'
+const isE2ETest = process.env.NODE_ENV === 'e2e-test'
+// eslint-disable-next-line no-undef
+const isTest = process.env.NODE_ENV === 'test' || isE2ETest
 
-if (isProduction || isTest) {
+if (isProduction || isE2ETest) {
   let webpackMiddleware = require('webpack-dev-middleware')
   let webpack = require('webpack')
   let webpackConfig = require('../webpack.config.js')

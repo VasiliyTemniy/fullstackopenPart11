@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "start-prod": "cross-env NODE_ENV=production node ./backend/index.js",
-    "start:test": "cross-env NODE_ENV=test node ./backend/index.js",
+    "start-test": "cross-env NODE_ENV=e2e-test node ./backend/index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit",
     "eslint": "eslint ./**/*.{js,jsx}",
     "build": "cross-env NODE_ENV=production webpack",
