@@ -39,16 +39,16 @@ jobs:
           TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
           PORT: ${{ vars.PORT }}
           SECRET: ${{ secrets.SECRET }}
-      # - name: deploy_app
-      #   run: |
-      #     if [[ ${{ github.event_name }} == 'push' ]]; then
-      #       npm run deploy-ping
-      #       echo "Deploy ping sent to render.com"
-      #     else 
-      #       echo "Pull request detected"
-      #     fi
-      #   env:
-      #     RENDER_COM_DEPLOY_WEBHOOK_URL: ${{ secrets.RENDER_COM_DEPLOY_WEBHOOK_URL }}
+      - name: deploy_app
+        run: |
+          if [[ ${{ github.event_name }} == 'push' ]]; then
+            npm run deploy-ping
+            echo "Deploy ping sent to render.com"
+          else 
+            echo "Pull request detected"
+          fi
+        env:
+          RENDER_COM_DEPLOY_WEBHOOK_URL: ${{ secrets.RENDER_COM_DEPLOY_WEBHOOK_URL }}
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
