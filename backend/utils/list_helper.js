@@ -1,5 +1,5 @@
 const groupBy = require('lodash/groupBy')
-const maxBy = require('lodash/maxby')
+const maxBy = require('lodash/maxBy')
 
 // eslint-disable-next-line no-unused-vars
 const dummy = (blogs) => {
